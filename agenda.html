@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de registros</title>
+    <style type="text/css">
+        p, h1 {
+          font-family: arial;
+        }
+        button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+
+
+}
+p.p2 { 
+border: 2px solid;
+border-radius: 5px;
+
+
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cbccc8)) fixed;
+}
+        </style>
+</head>
+<body>
+    <script>
+        let dados = '';
+        function butao1() {
+            var nome = document.getElementById("nomi")
+            var tele = document.getElementById("tel")
+            var email = document.getElementById("mail")
+            console.log(nome, tele, email)
+            dados = dados + "Nome: " + nome.value + '<br>' + "Telefone: " + tele.value + '<br>' + "E-mail: " + mail.value + '<br>' + '<br>';
+            document.getElementById("escreve1").innerHTML = dados ;
+}
+    </script>
+    <center>
+            <h1>Agenda</h1><br></center>
+<p>Nome: <input type="text" id="nomi"> </p>
+<p>Telefone: <input type="text" id="tel"> </p>
+<p>E-mail: <input type="text" id="mail"> </p>
+<center><button onclick="butao1()">Adicionar</button></center>
+<br>
+<p id="escreve1" class="p2"></p>
+
+</body>
+</html>
